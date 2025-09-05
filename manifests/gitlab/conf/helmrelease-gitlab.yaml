@@ -23,3 +23,8 @@ spec:
           enabled: false
       registry:
         enable: false
+    certmanager:
+      install: false
+    global:
+      ingress:
+        configureCertmanager: false
