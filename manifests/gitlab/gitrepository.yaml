@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: ssh://git@github.com:aidaner256/infra-tz.git
+  url: ssh://git@github.com/aidaner256/infra-tz.git
   ref:
     branch: main
  
