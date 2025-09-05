@@ -5,8 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./conf"
+  path: "./manifests/metallb/conf"
   prune: true
   sourceRef:
     kind: GitRepository
-    name: metallb
+    name: metallb-repo
