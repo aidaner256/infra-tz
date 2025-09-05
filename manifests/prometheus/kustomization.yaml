@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./manifests/grafana/conf"
+  path: "./manifests/prometheus/conf"
   prune: true
   sourceRef:
     kind: GitRepository

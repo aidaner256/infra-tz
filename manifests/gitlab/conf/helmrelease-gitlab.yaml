@@ -25,6 +25,3 @@ spec:
         enable: false
     certmanager:
       install: false
-    global:
-      ingress:
-        configureCertmanager: false
