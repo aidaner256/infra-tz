@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: gitlab-operator
+  namespace: gitlab-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: gitlab-operator
+      sourceRef:
+        kind: HelmRepository
+        name: gitlab
+        namespace: flux-system
+      version: "*"
+  values:
+    global:
+      hosts:
+        domain: gitlab.local.test
+      ingress:
+        configureCertmanager: false
+        tls:
+          enabled: false
+      registry:
+        enable: false
