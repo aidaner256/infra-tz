@@ -5,8 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./manifests/ingress-nginx/conf"
+  path: "./infra/platform/ingress-nginx/conf"
   prune: true
   sourceRef:
     kind: GitRepository
-    name: ingress-nginx-repo
+    name: infrastructure-repo

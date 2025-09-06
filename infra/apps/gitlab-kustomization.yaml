@@ -1,12 +1,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: prometheus
+  name: gitlab
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./manifests/prometheus/conf"
+  path: "./infra/apps/gitlab/conf"
   prune: true
   sourceRef:
     kind: GitRepository
-    name: monitoring-repo
+    name: infrastructure-repo

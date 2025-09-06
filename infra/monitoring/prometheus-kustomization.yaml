@@ -1,12 +1,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: metallb
+  name: prometheus
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./manifests/metallb/conf"
+  path: "./infra/monitoring/prometheus/conf"
   prune: true
   sourceRef:
     kind: GitRepository
-    name: metallb-repo
+    name: infrastructure-repo

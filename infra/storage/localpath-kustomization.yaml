@@ -5,8 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./manifests/localpath/conf"
+  path: "./infra/storage/localpath/conf"
   prune: true
   sourceRef:
     kind: GitRepository
-    name: localpath-repo
+    name: infrastructure-repo
