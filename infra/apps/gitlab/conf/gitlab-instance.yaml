@@ -21,7 +21,8 @@ spec:
       gitlab:
         gitaly:
           persistence:
-            enabled: false
+            enabled: true
+            storageClass: local-path
         gitlab-shell:
           enabled: false
         webservice:
@@ -35,11 +36,14 @@ spec:
       postgresql:
         primary:
           persistence:
-            enabled: false
+            enabled: true
+            storageClass: local-path
       redis:
         master:
           persistence:
-            enabled: false
+            enabled: true
+            storageClass: local-path
       minio:
         persistence:
-          enabled: false
+          enabled: true
+          storageClass: local-path
