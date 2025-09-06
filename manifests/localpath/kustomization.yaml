@@ -1,0 +1,12 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: localpath
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: "./manifests/localpath/conf"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: localpath-repo
