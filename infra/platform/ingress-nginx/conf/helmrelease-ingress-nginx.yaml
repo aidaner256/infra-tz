@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: ingress-nginx
-  namespace: ingress-nginx
+  namespace: flux-system
 spec:
   interval: 5m
   chart:
@@ -18,7 +18,7 @@ spec:
       service:
         type: LoadBalancer
         annotations:
-          metallb.universe.tf/address-pool: default
+          metallb.universe.tf/address-pool: default-address-pool
       metrics:
         enabled: true
         serviceMonitor:

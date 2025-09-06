@@ -4,3 +4,4 @@ resources:
   - helmrepository.yaml
   - helmrelease-gitlab.yaml
   - gitlab-instance.yaml
+  - gitlab-ingress.yaml
