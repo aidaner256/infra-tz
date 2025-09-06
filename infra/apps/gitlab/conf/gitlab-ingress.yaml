@@ -11,6 +11,9 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      more_set_headers "X-Forwarded-Proto: http";
+      more_set_headers "X-Forwarded-For: $proxy_add_x_forwarded_for";
 spec:
   ingressClassName: nginx
   rules:
