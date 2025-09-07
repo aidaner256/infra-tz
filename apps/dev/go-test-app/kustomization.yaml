@@ -8,27 +8,30 @@ metadata:
 namespace: dev
 commonLabels:
   app: myapp
-  version: v1.0.0
   managed-by: kustomize
+  version: v1.0.1
 
 commonAnnotations:
   kustomize.toolkit.fluxcd.io/name: myapp
   kustomize.toolkit.fluxcd.io/namespace: flux-system
 
 resources:
-  - config/configmap.yaml
-  - config/init-sql-configmap.yaml
-  - postgres/statefulset.yaml
-  - postgres/service.yaml
-  - redis/statefulset.yaml
-  - redis/service.yaml
-  - app/deployment.yaml
-  - app/service.yaml
-  - app/hpa.yaml
-  - ingress/ingress.yaml
+- config/configmap.yaml
+- config/init-sql-configmap.yaml
+- postgres/statefulset.yaml
+- postgres/service.yaml
+- redis/statefulset.yaml
+- redis/service.yaml
+- app/deployment.yaml
+- app/service.yaml
+- app/hpa.yaml
+- ingress/ingress.yaml
 
 # Изображения для замены
 images:
-  - name: myapp
-    newName: docker.io/aidaner2561/go-app-dev
-    newTag: v0.0.1
+- name: docker.io/aidaner2561/go-app-dev
+  newName: docker.io/aidaner2561/go-app-dev
+  newTag: v0.0.3
+- name: myapp
+  newName: docker.io/aidaner2561/go-app-dev
+  newTag: v0.0.1
