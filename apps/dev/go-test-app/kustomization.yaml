@@ -17,6 +17,7 @@ commonAnnotations:
 
 resources:
   - config/configmap.yaml
+  - config/secret.yaml
   - config/init-sql-configmap.yaml
   - postgres/statefulset.yaml
   - postgres/service.yaml
