@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+metadata:
+  name: dev-apps
+  namespace: dev
+
+namespace: dev
+
+resources:
+  - namespace.yaml
+  - go-test-app/
+
+commonLabels:
+  environment: dev
+  managed-by: kustomize
+
+commonAnnotations:
+  kustomize.toolkit.fluxcd.io/name: dev-apps
+  kustomize.toolkit.fluxcd.io/namespace: flux-system

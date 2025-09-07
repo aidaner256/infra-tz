@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+metadata:
+  name: applications
+  namespace: default
+
+resources:
+  - dev/
+  - prod/
+
+commonLabels:
+  managed-by: kustomize
+
+commonAnnotations:
+  kustomize.toolkit.fluxcd.io/name: applications
+  kustomize.toolkit.fluxcd.io/namespace: flux-system
