@@ -15,7 +15,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: gitlab.local.test
+  - host: gitlab.gitlab.local.test
     http:
       paths:
       - path: /
@@ -25,13 +25,3 @@ spec:
             name: gitlab-webservice-default
             port:
               number: 8181
-  - host: registry.gitlab.local.test
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: gitlab-registry
-            port:
-              number: 5000
