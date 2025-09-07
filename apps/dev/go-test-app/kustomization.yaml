@@ -27,11 +27,7 @@ resources:
 - app/hpa.yaml
 - ingress/ingress.yaml
 
-# Изображения для замены
 images:
-- name: docker.io/aidaner2561/go-app-dev
-  newName: docker.io/aidaner2561/go-app-dev
-  newTag: v0.0.2
-- name: myapp
-  newName: docker.io/aidaner2561/go-app-dev
-  newTag: v0.0.1
+  - name: myapp
+    newName: docker.io/aidaner2561/go-app-dev
+    newTag: v0.0.1
