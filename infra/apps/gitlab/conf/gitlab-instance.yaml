@@ -52,3 +52,8 @@ spec:
         persistence:
           enabled: true
           storageClass: local-path
+      prometheus:
+        server:
+          persistentVolume:
+            enabled: true
+            storageClass: local-path
