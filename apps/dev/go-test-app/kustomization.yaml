@@ -30,4 +30,4 @@ resources:
 images:
   - name: myapp
     newName: docker.io/aidaner2561/go-app-dev
-    newTag: v0.0.3
+    newTag: v0.0.2
