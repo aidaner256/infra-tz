@@ -13,15 +13,4 @@ spec:
         name: gitlab
         namespace: flux-system
       version: "*"
-  values:
-    global:
-      hosts:
-        domain: gitlab.local.test
-      ingress:
-        configureCertmanager: false
-        tls:
-          enabled: false
-      registry:
-        enable: false
-    certmanager:
-      install: false
+  values: {}

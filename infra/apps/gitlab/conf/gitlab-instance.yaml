@@ -12,13 +12,7 @@ spec:
           domain: gitlab.local.test
           https: false
         ingress:
-          enabled: true
-          class: nginx
-          tls:
-            enabled: false
-          annotations:
-            nginx.ingress.kubernetes.io/ssl-redirect: "false"
-            nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+          enabled: false
         registry:
           enabled: false
       nginx-ingress:

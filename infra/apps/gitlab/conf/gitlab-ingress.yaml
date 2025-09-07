@@ -11,9 +11,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/configuration-snippet: |
-      more_set_headers "X-Forwarded-Proto: http";
-      more_set_headers "X-Forwarded-For: $proxy_add_x_forwarded_for";
+    nginx.ingress.kubernetes.io/proxy-set-headers: "gitlab-system/gitlab-webservice-default"
 spec:
   ingressClassName: nginx
   rules:
