@@ -9,7 +9,7 @@ namespace: dev
 commonLabels:
   app: myapp
   managed-by: kustomize
-  version: v1.0.1
+  version: v1.0.2
 
 commonAnnotations:
   kustomize.toolkit.fluxcd.io/name: myapp
@@ -30,4 +30,4 @@ resources:
 images:
   - name: myapp
     newName: docker.io/aidaner2561/go-app-dev
-    newTag: v0.0.1
+    newTag: v0.0.3
