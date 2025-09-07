@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: my-app-servicemonitor
+  namespace: monitoring
+  labels:
+    release: prometheus   # должен совпадать с relase Prometheus, см. твой pod
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+      component: app
+  namespaceSelector:
+    matchNames:
+      - dev
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
